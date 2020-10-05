@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Blackrock URL Shortener</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    {{> styles}}
+  </head>
+  <body>
+	   
+    <header id="header">
+      <nav class="navbar" role="banner">
+          <div class="container">
+              {{> toggle}}
+              {{> topbar}}
+              {{> nav}}
+              <div>
+                <ol class="breadcrumb">
+                  <li class="active">Home</li>
+                </ol>
+              </div>
+          </div>
+      </nav>
+    </header>
+
+    <section id="main" >
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            {{#alert}}
+            <div class="alert alert-danger" role="alert">
+              {{alert}}
+            </div>
+            {{/alert}}
+            <div class="jumbotron">
+              <h1>Blackrock URL Shortener</h1>
+              <p>Welcome to the Blackrock Application Server's URL Shortener Service. Login and register the URLs that you would like to redirect and then provide these short URLs in place of the original URLs to consumers. Then track analytics describing clickthroughs, origin, etc - for each URL.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    {{> footer}}  
+    {{> javascript}}
+
+  </body>
+</html>

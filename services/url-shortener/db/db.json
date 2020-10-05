@@ -1,0 +1,90 @@
+{
+	"users": [
+		{
+			"email": "test@test.com",
+			"password": "password"
+		}
+	],
+	"urls": [
+		{
+			"path": "/home",
+			"action": "302",
+			"target": "https://www.darrensmith.com.au"
+		},
+		{
+			"path": "/references",
+			"action": "302",
+			"target": "https://www.darrensmith.com.au/references.html"
+		},
+		{
+			"path": "/blog",
+			"action": "302",
+			"target": "https://blog.darrensmith.com.au/"
+		},
+		{
+			"path": "/linkedin",
+			"action": "302",
+			"target": "https://www.linkedin.com/in/darrenjsmith/"
+		},
+		{
+			"path": "/facebook",
+			"action": "302",
+			"target": "https://www.facebook.com/daz.zamatraz.1/"
+		},
+		{
+			"path": "/github",
+			"action": "302",
+			"target": "https://github.com/darrensmith"
+		},
+		{
+			"path": "/github/industryswarm",
+			"action": "302",
+			"target": "https://github.com/industryswarm"
+		},
+		{
+			"path": "/industryswarm",
+			"action": "302",
+			"target": "https://www.industryswarm.com"
+		},
+		{
+			"path": "/productpipes",
+			"action": "302",
+			"target": "https://www.productpipes.com"
+		},
+		{
+			"path": "/circle",
+			"action": "302",
+			"target": "https://circl.ai"
+		},
+		{
+			"path": "/circl",
+			"action": "302",
+			"target": "https://circl.ai"
+		},
+		{
+			"path": "/darrenandcallie",
+			"action": "302",
+			"target": "https://www.darrenandcallie.com"
+		},
+		{
+			"path": "/gitlab",
+			"action": "302",
+			"target": "https://gitlab.industryswarm.com"
+		},
+		{
+			"path": "/antler",
+			"action": "302",
+			"target": "https://nas.home.darrensmith.com.au:443/share.cgi?ssid=06yI7rH"
+		},
+		{
+			"path": "/ebooks",
+			"action": "302",
+			"target": "https://nas.home.darrensmith.com.au/share.cgi?ssid=03VgB4Z"
+		},
+		{
+			"path": "/tvseries",
+			"action": "302",
+			"target": "https://nas.home.darrensmith.com.au/share.cgi?ssid=0eqRV7k"
+		}
+	]
+}

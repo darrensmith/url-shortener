@@ -1,0 +1,22 @@
+<div class="navbar-two collapse other-collapse">
+    <ul class="nav navbar-nav">
+        <li class="dropdown li-boxed">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Menu <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span></a>
+            <ul class="dropdown-menu">
+
+                {{#showSignIn}}
+                <li><a href="/admin/authorize">Sign In</a></li>
+                {{/showSignIn}}
+
+                {{#showNavAdmin}}
+                <li><a href="/admin/url-management">URL Management</a></li>
+                {{/showNavAdmin}}
+
+                {{#showSignOut}}
+                <li><a href="/admin/sign-out">Sign Out</a></li>
+                {{/showSignOut}}
+
+            </ul>
+        </li>        
+    </ul>
+</div>
