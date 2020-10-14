@@ -8,7 +8,7 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "is-blackrock": "^0.2.0"
+    "is-blackrock": "^0.2.1"
   },
   "author": {
     "name": "Darren Smith",
@@ -25,12 +25,8 @@
     "type": "git",
     "url": "https://github.com/darrensmith/url-shortener.git"
   },
-  "engines": [
-    "node"
-  ],
-  "bin": {
-    "url-shortener": "./server.js"
-  },
+  "engines": [ "node" ],
+  "bin": { "url-shortener": "./server.js" },
   "devDependencies": {
     "chai": "^4.2.0",
     "chai-uuid": "^1.0.6",
