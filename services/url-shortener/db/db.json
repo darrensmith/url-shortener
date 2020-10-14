@@ -13,12 +13,12 @@
 		},
 		{
 			"path": "/cv",
-			"action": "302",
+			"action": "capture",
 			"target": "https://www.darrensmith.com.au/files/20201004_DARREN_SMITH_CV.pdf"
 		},
 		{
 			"path": "/resume",
-			"action": "302",
+			"action": "capture",
 			"target": "https://www.darrensmith.com.au/files/20201004_DARREN_SMITH_CV.pdf"
 		},
 		{
@@ -105,6 +105,6 @@
 			"path": "/courses/product",
 			"action": "capture",
 			"target": "https://nas.home.darrensmith.com.au/share.cgi?ssid=01co2C7"
-		},		
+		}	
 	]
 }
