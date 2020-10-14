@@ -12,6 +12,16 @@
 			"target": "https://www.darrensmith.com.au"
 		},
 		{
+			"path": "/cv",
+			"action": "302",
+			"target": "https://www.darrensmith.com.au/files/20201004_DARREN_SMITH_CV.pdf"
+		},
+		{
+			"path": "/resume",
+			"action": "302",
+			"target": "https://www.darrensmith.com.au/files/20201004_DARREN_SMITH_CV.pdf"
+		},
+		{
 			"path": "/references",
 			"action": "302",
 			"target": "https://www.darrensmith.com.au/references.html"
@@ -85,6 +95,16 @@
 			"path": "/tvseries",
 			"action": "capture",
 			"target": "https://nas.home.darrensmith.com.au/share.cgi?ssid=0eqRV7k"
-		}
+		},
+		{
+			"path": "/courses/data-science",
+			"action": "capture",
+			"target": "https://nas.home.darrensmith.com.au/share.cgi?ssid=09GF7QF"
+		},
+		{
+			"path": "/courses/product",
+			"action": "capture",
+			"target": "https://nas.home.darrensmith.com.au/share.cgi?ssid=01co2C7"
+		},		
 	]
 }
