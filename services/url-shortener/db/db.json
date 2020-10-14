@@ -73,17 +73,17 @@
 		},
 		{
 			"path": "/antler",
-			"action": "302",
+			"action": "capture",
 			"target": "https://nas.home.darrensmith.com.au:443/share.cgi?ssid=06yI7rH"
 		},
 		{
 			"path": "/ebooks",
-			"action": "302",
+			"action": "capture",
 			"target": "https://nas.home.darrensmith.com.au/share.cgi?ssid=03VgB4Z"
 		},
 		{
 			"path": "/tvseries",
-			"action": "302",
+			"action": "capture",
 			"target": "https://nas.home.darrensmith.com.au/share.cgi?ssid=0eqRV7k"
 		}
 	]

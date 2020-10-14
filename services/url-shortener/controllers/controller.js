@@ -109,10 +109,35 @@
 		urlModel.details({ path: req.path }, function(urlErr, urlRes) {
 			if(urlRes && urlRes.result && urlRes.result.action == "302" && urlRes.result.target) {
 				res.redirect(urlRes.result.target);
+			} else if (urlRes && urlRes.result && urlRes.result.action == "capture" && urlRes.result.target) {
+				res.render("general/download.mustache");
 			} else {
 				res.redirect("https://www.darrensmith.com.au");
 			}
 		});
+	}
+
+	/**
+	 * POST
+	 * @param {object} req - Request object
+	 * @param {object} res - Response object
+	 */
+	ctrl.post = function BRAppURLShortenerRootCtrlPost(req, res){
+		var urlModel = service.models.get("urls");
+		if(req.body.emailAddress && req.body.fullName) {
+			urlModel.details({ path: req.path }, function(urlErr, urlRes) {
+				var fs = require("fs"), newLine = req.body.emailAddress + "," + req.body.fullName + "," + req.path + "," + urlRes.result.target + "\n";
+				fs.appendFile("/opt/daz.to/users/" + req.body.emailAddress + ".csv", newLine, function(err, result) {
+					if(urlRes && urlRes.result && urlRes.result.action == "capture" && urlRes.result.target) {
+						res.redirect(urlRes.result.target);
+					} else {
+						res.redirect("https://www.darrensmith.com.au");
+					}
+				});
+			});
+		} else {
+			res.redirect(req.originalUrl + "?error=INVALID_DETAILS");
+		}
 	}
 
 	/**
