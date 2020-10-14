@@ -12,7 +12,7 @@
 	 * @param {object} session - Session Object
 	 * @param {object} context - Context Object
 	 */
-	var output = function(isnode, session, context){
+	var output = function(core, session, context){
 		if(session.authorised) {
 			context.showRegister = false;
 			context.showSignIn = false;
@@ -27,7 +27,7 @@
 			if(session.userName) { context.userName = session.userName; }
 			if(session.authorised) { context.authorised = true; }
 		}
-		context.clientLinks = isnode.globals.get("clientLinks");
+		context.clientLinks = core.globals.get("clientLinks");
 		return context;
 	}
 

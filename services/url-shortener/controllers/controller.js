@@ -7,23 +7,23 @@
 
 ;!function(undefined) {
 
-	var ctrl = {}, isnode, log, service;
+	var ctrl = {}, core, log, service;
 
 	/**
 	 * Initialises the controller
-	 * @param {object} isnodeObj - The parent isnode object
+	 * @param {object} coreObj - The parent core object
 	 */
-	ctrl.init = function BRAppURLShortenerRootCtrlInit(isnodeObj){
+	ctrl.init = function BRAppURLShortenerRootCtrlInit(coreObj){
 		var serviceName = "url-shortener";
-		isnode = isnodeObj;
-		log = isnode.module("logger").log;
-		service = isnode.module("services").service(serviceName);
+		core = coreObj;
+		log = core.module("logger").log;
+		service = core.module("services").service(serviceName);
 		dbLoad();
 
 		/* Load Data Models */
-		service.models.add("sessions", require("../models/sessions.js")(isnode));
-		service.models.add("users", require("../models/users.js")(isnode));
-		service.models.add("urls", require("../models/urls.js")(isnode));
+		service.models.add("sessions", require("../models/sessions.js")(core));
+		service.models.add("users", require("../models/users.js")(core));
+		service.models.add("urls", require("../models/urls.js")(core));
 		service.vars.set("signedInMenuContext", require("../lib/signedInMenuContext.js"));
 		service.vars.set("uniqueIdentifiers", require("../lib/uniqueIdentifiers.js"));
 		service.vars.set("pageBar", require("../lib/pageBar.js"));

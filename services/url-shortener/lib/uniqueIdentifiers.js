@@ -11,7 +11,7 @@
 	 * Entry (Selector) Method
 	 * @param {object} inputObject - Input Object
 	 *		{
-	 *			"isnode": isnode,
+	 *			"core": core,
 	 *			"entity": "sessions",
 	 *			"attr": "uuid",
 	 *			"type": "uuid" OR "random"
@@ -56,20 +56,20 @@
 	 * @param {function} cb - Callback Function
 	 */
 	var generator = function(inputObject, cb){
-		var isnode = inputObject.isnode;
+		var core = inputObject.core;
 		var entity = inputObject.entity;
 		var attr = inputObject.attr;
 		var type = inputObject.type;
 		var length = inputObject.length;
 		if(!length) { length = 36; }
 		var order = inputObject.order;
-		var db = isnode.globals.get("db");
+		var db = core.globals.get("db");
 		switch(type) {
 			case "uuid":
-				var uniqueId = isnode.module("utilities").uuid4();
+				var uniqueId = core.module("utilities").uuid4();
 				break;
 			default:
-				var uniqueId = isnode.module("utilities").randomString(length);
+				var uniqueId = core.module("utilities").randomString(length);
 				break;
 		}
 		db.query(

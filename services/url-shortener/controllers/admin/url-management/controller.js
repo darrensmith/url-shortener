@@ -16,7 +16,7 @@
 	 */
 	ctrl.get = function BRAppURLShortenerUrlMgmtCtrlGet(req, res){
 		req.auth.web([], function() {
-			var context = req.service.vars.get("signedInMenuContext")(req.isnode, req.session, {});
+			var context = req.service.vars.get("signedInMenuContext")(req.core, req.session, {});
 			res.render("url-management/url-management.mustache", context);
 			return;
 		});

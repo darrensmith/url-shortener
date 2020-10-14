@@ -7,16 +7,16 @@
 
 ;!function(undefined) {
 
-	var model = {}, isnode = null, service;
+	var model = {}, core = null, service;
 
 
 	/**
 	 * Initialises the model
-	 * @param {object} isnodeObj - The parent isnode object
+	 * @param {object} coreObj - The parent core object
 	 */
-	model.init = function(isnodeObj){
-		isnode = isnodeObj;
-		service = isnode.module("services").service("url-shortener");
+	model.init = function(coreObj){
+		core = coreObj;
+		service = core.module("services").service("url-shortener");
 		return model;
 	}
 

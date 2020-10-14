@@ -15,17 +15,12 @@
 	 * @param {object} res - Response object
 	 */
 	ctrl.get = function BRAppURLShortenerAdminCtrlGet(req, res){
-		var context = {
-			showRegister: true,
-			showSignIn: true,
-			showSignOut: false,
-			showMenu: false
-		};	
+		var context = { showRegister: true, showSignIn: true, showSignOut: false, showMenu: false };	
 		if(req.session.authorised == true) {
-			context = req.service.vars.get("signedInMenuContext")(req.isnode, req.session, context);
+			context = req.service.vars.get("signedInMenuContext")(req.core, req.session, context);
 			res.render("general/home.mustache", context);
 		} else {
-			context = req.service.vars.get("signedInMenuContext")(req.isnode, {}, context);
+			context = req.service.vars.get("signedInMenuContext")(req.core, {}, context);
 			res.render("general/home.mustache", context);
 		}
 	}
